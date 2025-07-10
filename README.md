@@ -1,4 +1,4 @@
-[```mermaid
+```mermaid
 flowchart TD
     EXTERNAL["External Data Sources\n(NSQA, MISLE, FCC, IMO, ITU, IACS)"]
     LAMBDA1["AWS Lambda Functions"]
@@ -22,4 +22,4 @@ flowchart TD
     C --> D
     D --> E
     E --> F
-```](https://github.com/copilot/c/e26de6b1-b8c1-4aa2-85c3-655caef6d91b)
+```  
