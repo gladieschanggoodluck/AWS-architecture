@@ -8,22 +8,18 @@ flowchart TD
     GLUE2["AWS Glue Jobs"]
     LAMBDA2["AWS Lambda Functions"]
     QUICKSIGHT["Amazon QuickSight"]
-    IAM["AWS IAM\n(Access Control)"]
-    KMS["AWS KMS\n(Encryption)"]
-    CLOUDWATCH["AWS CloudWatch\n(Monitoring)"]
+    IAM["AWS IAM\n(Ac```mermaid
+flowchart TD
+    A[External Data Sources<br/>(NSQA, MISLE, FCC, IMO, ITU, IACS)]
+    B[AWS Lambda Functions<br/>(Data Retrieval)]
+    C[Amazon S3<br/>(Raw Data Bucket)]
+    D[AWS Glue Jobs<br/>(Data Processing)]
+    E[Amazon RDS<br/>(PostgreSQL/Structured Data)]
+    F[Amazon QuickSight<br/>(Data Visualization)]
 
-    EXTERNAL --> S3
-    LAMBDA1 --> GLUE1
-    GLUE1 --> S3
-    S3 --> GLUE1
-    GLUE1 --> RDS
-    RDS --> GLUE2
-    GLUE2 --> LAMBDA2
-    RDS --> QUICKSIGHT
-    QUICKSIGHT --> IAM
-    LAMBDA2 --> KMS
-    GLUE2 --> KMS
-    LAMBDA1 --> CLOUDWATCH
-    GLUE1 --> CLOUDWATCH
-    RDS --> CLOUDWATCH
-````
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+```
