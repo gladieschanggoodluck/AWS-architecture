@@ -1,17 +1,14 @@
 ```mermaid
 flowchart TD
-    subgraph Security_and_Monitoring [Security and Monitoring]
-        IAM[AWS IAM<br/>Access Control]
-        KMS[AWS KMS<br/>Encryption]
-        CW[AWS CloudWatch<br/>Monitoring & Alerts]
-    end
-
-    EXTERNAL[External Data Sources (NSQA, MISLE, FCC, IMO, ITU, IACS)]
-    LAMBDA[AWS Lambda Functions<br/>Data Retrieval & Automation]
-    S3[Amazon S3<br/>Raw Data Bucket (raw/, processed/)]
-    GLUE[AWS Glue Jobs<br/>Data Processing]
-    RDS[Amazon RDS (PostgreSQL)<br/>Structured Data]
-    QUICKSIGHT[Amazon QuickSight<br/>Data Visualization]
+    EXTERNAL[External Data Sources: NSQA, MISLE, FCC, IMO, ITU, IACS]
+    LAMBDA[AWS Lambda Functions: Data Retrieval & Automation]
+    S3[Amazon S3: Raw Data Bucket]
+    GLUE[AWS Glue Jobs: Data Processing]
+    RDS[Amazon RDS PostgreSQL: Structured Data]
+    QUICKSIGHT[Amazon QuickSight: Data Visualization]
+    IAM[AWS IAM: Access Control]
+    KMS[AWS KMS: Encryption]
+    CW[AWS CloudWatch: Monitoring & Alerts]
 
     EXTERNAL --> LAMBDA
     LAMBDA --> S3
