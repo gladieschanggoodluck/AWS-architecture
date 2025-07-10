@@ -1,16 +1,16 @@
 ```mermaid
 flowchart TD
-    EXTERNAL[External Data Sources\n(NSQA, MISLE, FCC, IMO, ITU, IACS)]
+    EXTERNAL[External Data Sources<br>(NSQA, MISLE, FCC, IMO, ITU, IACS)]
     LAMBDA1[AWS Lambda Functions]
-    S3[Amazon S3\n(Raw Data Bucket)\nFolders: raw/, processed/]
+    S3[Amazon S3<br>(Raw Data Bucket)<br>Folders: raw/, processed/]
     GLUE1[AWS Glue Jobs]
-    RDS[Amazon RDS\n(PostgreSQL)\nSchemas: fcc, iacs, imo, itu, misle, nsqa]
+    RDS[Amazon RDS<br>(PostgreSQL)<br>Schemas: fcc, iacs, imo, itu, misle, nsqa]
     GLUE2[AWS Glue Jobs]
     LAMBDA2[AWS Lambda Functions]
     QUICKSIGHT[Amazon QuickSight]
-    IAM[AWS IAM\n(Access Control)]
-    KMS[AWS KMS\n(Encryption)]
-    CLOUDWATCH[AWS CloudWatch\n(Monitoring)]
+    IAM[AWS IAM<br>(Access Control)]
+    KMS[AWS KMS<br>(Encryption)]
+    CLOUDWATCH[AWS CloudWatch<br>(Monitoring)]
 
     EXTERNAL --> S3
     LAMBDA1 --> GLUE1
